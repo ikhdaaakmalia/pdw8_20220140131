@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 8</title>
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <header>
+        <h1>WEB PUNYA AMEL</h1>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="form.html">Sini Kenalan</a></li>
+                <li><a href="hobby.html">Hobby</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section>
+                <h2>Salam Kenal</h2>
+                <p>Nama: <span id="nama"></span></p>
+                <p>Tanggal Lahir: <span id="tanggal_lahir"></span></p>
+                <p>Jenis Kelamin: <span id="jenis_kelamin"></span></p>
+                <p>Pekerjaan: <span id="pekerjaan"></span></p>
+                <p>Alamat: <span id="alamat"></span></p>
+            </section>
+            <a href="index.html" class="back-btn">Back</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>PRAKTIKUM 10 PDW</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        
+        document.getElementById('nama').textContent = params.get('nama');
+        document.getElementById('tanggal_lahir').textContent = params.get('tanggal_lahir');
+        document.getElementById('jenis_kelamin').textContent = params.get('jenis_kelamin');
+        document.getElementById('pekerjaan').textContent = params.get('pekerjaan');
+        document.getElementById('alamat').textContent = params.get('alamat');
+    </script>
+</body>
+</html>
